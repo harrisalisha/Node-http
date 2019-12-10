@@ -41,14 +41,15 @@ const server = http.createServer((req, res) => {
            res.setHeader('Content-Type', 'text/html');
            res.end('<html><body><h1>Error 404: ' + fileUrl + ' not an HTML file</h1></body></html>')
            
-           return;
+        
        }
 
-   }else{
-    res.statusCode = 404;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<html><body><h1>Error 404:' +req.methodn+' not supported</h1></body></html>');
-   return;
+   }
+   else{
+      res.statusCode = 404;
+      res.setHeader('Content-Type', 'text/html');
+      res.end('<html><body><h1>Error 404:' +req.methodn+' not supported</h1></body></html>');
+      
    }
 })
 
